@@ -1,46 +1,33 @@
-import java.util.Scanner;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Mediateca mediateca = new Mediateca();
-        Scanner scanner = new Scanner(System.in);
-        int opcion;
+        while (true) {
+            String[] opciones = {"Agregar material", "Modificar material", "Listar material disponibles",
+                    "Borrar Material","Buscar material", "Salir"};
+            int opcion = JOptionPane.showOptionDialog(null, "Seleccione una opción:", "Menú Mediateca",
+                    JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
 
-        do {
-            System.out.println("Mediateca - Menú:");
-            System.out.println("1. Agregar material");
-            System.out.println("2. Modificar material");
-            System.out.println("3. Listar materiales disponibles");
-            System.out.println("4. Borrar material");
-            System.out.println("5. Buscar material");
-            System.out.println("6. Salir");
-            System.out.print("Ingrese una opción: ");
-            opcion = scanner.nextInt();
+            if (opcion == 5 || opcion == JOptionPane.CLOSED_OPTION){
+                JOptionPane.showMessageDialog(null,"Saliendo del programa.");
+                break;
+            }
 
-            switch (opcion) {
+            switch (opcion){
+                case 0:
+                    break;
                 case 1:
-                    // Lógica para agregar material
                     break;
                 case 2:
-                    // Lógica para modificar material
                     break;
                 case 3:
-                    mediateca.listarMateriales();
                     break;
                 case 4:
-                    // Lógica para borrar material
-                    break;
-                case 5:
-                    // Lógica para buscar material
-                    break;
-                case 6:
-                    System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opción inválida.");
+                    JOptionPane.showMessageDialog(null,"Opción no valida.");
+                    break;
             }
-        } while (opcion != 6);
-
-        scanner.close();
+        }
     }
 }
