@@ -2,7 +2,7 @@ public abstract class Material {
     protected String codigo;
     protected String titulo;
 
-    public Material(String codigo, String titulo) {
+    public Material(int id, String s, String codigo, String titulo) {
         this.codigo = codigo;
         this.titulo = titulo;
     }

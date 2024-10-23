@@ -6,7 +6,7 @@ public class CDAudio extends Material {
     private int unidadesDisponibles;
 
     public CDAudio(String codigo, String titulo, String artista, String genero, double duracion, int numCanciones, int unidadesDisponibles) {
-        super(codigo, titulo);
+        super(id, titulo, codigo, titulo);
         this.artista = artista;
         this.genero = genero;
         this.duracion = duracion;

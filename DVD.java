@@ -4,7 +4,7 @@ public class DVD extends Material {
     private double duracion;
 
     public DVD(String codigo, String titulo, String director, String genero, double duracion) {
-        super(codigo, titulo);
+        super(id, titulo, codigo, titulo);
         this.director = director;
         this.genero = genero;
         this.duracion = duracion;
